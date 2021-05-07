@@ -78,12 +78,7 @@ namespace PierresPatisserie.Tests
     [TestMethod]
     public void PastryOrder_CreateInstanceOfPastryOrder_PastryOrder()
     {
-      // Arrange
-      
-      // Act
-      PastryOrder newPastryOrder = new PastryOrder();
-
-      // Assert
+      PastryOrder newPastryOrder = new PastryOrder(0, 0);
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
 
