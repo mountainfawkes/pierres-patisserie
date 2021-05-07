@@ -38,17 +38,18 @@ namespace PierresPatisserie.Tests
     [TestMethod]
     public void CalculateBreadCost_CalculateCostOfThreeLoaves_BreadCost()
     {
-      // Arrange
       int breadQuantity = 3;
       int breadPrice = 5;
       BreadOrder newBreadOrder = new BreadOrder(breadQuantity, breadPrice);
-
-      // Act
       int expectedBreadCost = 2 * 5;
       int breadCost = newBreadOrder.CalculateBreadCost(breadQuantity, breadPrice);
-
-      // Assert
       Assert.AreEqual(expectedBreadCost, breadCost);
+    }
+
+    [TestMethod]
+    public void CalculateBreadCost_CalculateCostOfFourLoaves_BreadCost()
+    {
+
     }
   }
 }
