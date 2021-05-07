@@ -17,7 +17,7 @@ namespace PierresPatisserie.Bread
 
     public int CalculateBreadCost(int breadQuantity, int breadPrice)
     {
-      return 0;
+      return breadQuantity * breadPrice;
     }
   }
 }
