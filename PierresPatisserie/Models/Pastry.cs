@@ -6,22 +6,24 @@ namespace PierresPatisserie.Pastry
   public class PastryOrder
   {
     public int PastryQuantity;
-    public int PastryPrice;
+    public int PastrySinglePrice;
+    public int PastryTrioPrice;
     public int PastryCost;
     
-    public PastryOrder(int pastryQuantity, int pastryPrice)
+    public PastryOrder(int pastryQuantity, int pastrySinglePrice, int pastryTrioPrice)
     {
       PastryQuantity = pastryQuantity;
-      PastryPrice = pastryPrice;
+      PastrySinglePrice = pastrySinglePrice;
+      PastryTrioPrice = pastryTrioPrice;
     }
 
-    public int CalculatePastryCost(int pastryQuantity, int pastryPrice)
+    public int CalculatePastryCost(int pastryQuantity, int pastrySinglePrice, int pastryTrioPrice)
     {
       if (pastryQuantity % 3 == 0)
       {
-        return (pastryQuantity / 3) * 5;
+        return (pastryQuantity / 3) * pastryTrioPrice;
       }
-      return pastryQuantity * pastryPrice;
+      return pastryQuantity * pastrySinglePrice;
     }
   }
 }

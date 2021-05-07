@@ -78,7 +78,7 @@ namespace PierresPatisserie.Tests
     [TestMethod]
     public void PastryOrder_CreateInstanceOfPastryOrder_PastryOrder()
     {
-      PastryOrder newPastryOrder = new PastryOrder(0, 0);
+      PastryOrder newPastryOrder = new PastryOrder(0, 0, 0);
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
 
@@ -86,34 +86,49 @@ namespace PierresPatisserie.Tests
     public void PastryOrder_CreatesOrderWithQuantityAndPrice_PastryOrder()
     {
       int pastryQuantity = 1;
-      int pastryPrice = 2;
-      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastryPrice);
-      Assert.AreEqual(pastryPrice, newPastryOrder.PastryPrice);
+      int pastrySinglePrice = 2;
+      int pastryTrioPrice = 5;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
+      Assert.AreEqual(pastryTrioPrice, newPastryOrder.PastryTrioPrice);
     }
 
     [TestMethod]
     public void CalculatePastryCost_CalculatesCostOfOnePastry_PastryCost()
     {
       int pastryQuantity = 1;
-      int pastryPrice = 2;
-      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastryPrice);
-      int pastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastryPrice);
-      Assert.AreEqual(pastryPrice, pastryCost);
+      int pastrySinglePrice = 2;
+      int pastryTrioPrice = 5;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
+      int pastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
+      Assert.AreEqual(pastrySinglePrice, pastryCost);
     }
 
     [TestMethod]
     public void CalculatePastryCost_CalculatesCostOfThreePastries_PastryCost()
     {
-      // Arrange
       int pastryQuantity = 3;
-      int pastryPrice = 5;
-      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastryPrice);
+      int pastrySinglePrice = 2;
+      int pastryTrioPrice = 5;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
+      int pastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
+      Assert.AreEqual(pastryTrioPrice, pastryCost);
+    }
+
+    [TestMethod]
+    public void CalculatePastryCost_CalculatesCostOfFourPastries_PastryCost()
+    {
+      // Arrange
+      int pastryQuantity = 4;
+      int pastrySinglePrice = 2;
+      int pastryTrioPrice = 5;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
 
       // Act
-      int pastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastryPrice);
+      int expectedPastryCost = (3 / 3 * 5) + (1 * 2);
+      int pastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastrySinglePrice, pastryTrioPrice);
 
       // Assert
-      Assert.AreEqual(pastryPrice, pastryCost);
+      Assert.AreEqual(expectedPastryCost, pastryCost);
     }
   }
 }
