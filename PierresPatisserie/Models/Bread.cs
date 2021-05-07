@@ -21,9 +21,10 @@ namespace PierresPatisserie.Bread
       {
         return ((breadQuantity * 2) / 3) * breadPrice;
       }
-      else if (breadQuantity % 3 == 1)
+      else if (breadQuantity % 3 == 1 || breadQuantity % 3 == 2)
       {
-        return ((((breadQuantity - 1) * 2) / 3) + 1) * breadPrice;
+        int remainder = breadQuantity % 3;
+        return ((((breadQuantity - remainder) * 2) / 3) + remainder) * breadPrice;
       }
       else return breadQuantity * breadPrice;
     }
