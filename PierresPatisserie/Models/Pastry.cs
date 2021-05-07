@@ -11,8 +11,8 @@ namespace PierresPatisserie.Pastry
     
     public PastryOrder(int pastryQuantity, int pastryPrice)
     {
-      PastryQuantity = 0;
-      PastryPrice = 0;
+      PastryQuantity = pastryQuantity;
+      PastryPrice = pastryPrice;
     }
   }
 }
