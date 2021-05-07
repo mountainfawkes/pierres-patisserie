@@ -86,6 +86,20 @@ namespace PierresPatisserie.Tests
       // Assert
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
+
+    [TestMethod]
+    public void PastryOrder_CreatesOrderWithQuantityAndPrice_PastryOrder()
+    {
+      // Arrange
+      int pastryQuantity = 1;
+      int pastryPrice = 2;
+
+      // Act
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastryPrice);
+
+      // Assert
+      Assert.AreEqual(pastryPrice, newPastryOrder.PastryPrice);
+    }
   }
 }
 
