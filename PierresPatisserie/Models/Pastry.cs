@@ -17,6 +17,10 @@ namespace PierresPatisserie.Pastry
 
     public int CalculatePastryCost(int pastryQuantity, int pastryPrice)
     {
+      if (pastryQuantity % 3 == 0)
+      {
+        return (pastryQuantity / 3) * 5;
+      }
       return pastryQuantity * pastryPrice;
     }
   }
