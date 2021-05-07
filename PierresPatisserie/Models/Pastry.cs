@@ -23,6 +23,11 @@ namespace PierresPatisserie.Pastry
       {
         return (pastryQuantity / 3) * pastryTrioPrice;
       }
+      else if (pastryQuantity % 3 == 1 || pastryQuantity % 3 == 2)
+      {
+        int remainder = pastryQuantity % 3;
+        return (pastryQuantity - remainder) / 3 * pastryTrioPrice + remainder * pastrySinglePrice;
+      }
       return pastryQuantity * pastrySinglePrice;
     }
   }
