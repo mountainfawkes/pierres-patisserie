@@ -5,10 +5,10 @@ namespace PierresPatisserie.Pastry
 {
   public class PastryOrder
   {
-    public int PastryQuantity;
-    public int PastrySinglePrice;
-    public int PastryTrioPrice;
-    public int PastryCost;
+    public int PastryQuantity { get; set; }
+    public int PastrySinglePrice { get; set; }
+    public int PastryTrioPrice { get; set; }
+    public int PastryCost { get; set; }
     
     public PastryOrder(int pastryQuantity, int pastrySinglePrice, int pastryTrioPrice)
     {

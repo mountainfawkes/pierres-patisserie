@@ -52,13 +52,13 @@ Pierre's Patisserie is an app that presents a menu of tasty pastries and queries
 
 ## Tests
 
-Each model in this application was comprehensively tested during development according to test-driven development best practices. For an overview of functionality tested, please review the tests in the test file by navigating to `PierresPatisserie.Solution/PierresPatisserie.Tests/ModelTests/PierresPatisserie.Tests.cs` and opening it in your preferred code editor.
+Each model in this application was comprehensively tested during development according to test-driven development best practices. For an overview of functionality tested, please review the tests in the test file by navigating to `~/PierresPatisserie.Tests/ModelTests/PierresPatisserie.Tests.cs` and opening it in your preferred code editor.
 
-This project utilizes one test file to test both Bread and Pastry classes, which are currently found in the `PierresPatisserie.Solution/PierresPatisserie/ModelTests/` directory. Test classes are separated by comments indicating the functionality being tested.
+This project utilizes one test file to test both Bread and Pastry classes, which are currently found in the `~/PierresPatisserie/ModelTests/` directory. Test classes are separated by comments indicating the functionality being tested.
 
 ## Whiteboarding
 
-This project was planned with a recorded whiteboarding session available for download or listen. Refer to the audio file in the main project directory at `PierresPatisserie.Solution/whiteboard.m4a`.
+This project was planned with a recorded whiteboarding session available for download or listen. Refer to the audio file in the main project directory at `~/whiteboard.m4a`.
 
 Contact me for the video file if you want to see the full spectrum of human emotion.
 

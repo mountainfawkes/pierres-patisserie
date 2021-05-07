@@ -5,9 +5,9 @@ namespace PierresPatisserie.Bread
 {
   public class BreadOrder
   {
-    public int BreadQuantity;
-    public int BreadPrice;
-    public int BreadCost;
+    public int BreadQuantity { get; set; }
+    public int BreadPrice { get; set; }
+    public int BreadCost { get; set; }
     
     public BreadOrder(int breadQuantity, int breadPrice)
     {
