@@ -44,6 +44,16 @@ namespace PierresPatisserie
       // Return the price to the console
       Console.WriteLine("Thank you for your order!");
       Console.WriteLine("Your total cost is $" + totalCost);
+
+      // Restarts the program if necessary
+      Console.WriteLine("-------------------------------------");
+      Console.WriteLine("Would you like to place another order? Please enter 'y' for yes.");
+      string reply = Console.ReadLine();
+      if (reply == "y")
+      {
+        Main();
+      }
+      else Console.WriteLine("Thank you for your business! Goodbye.");
     }
   }
 }
