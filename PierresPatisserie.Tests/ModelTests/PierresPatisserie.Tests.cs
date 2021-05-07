@@ -95,6 +95,21 @@ namespace PierresPatisserie.Tests
       // Assert
       Assert.AreEqual(pastryPrice, newPastryOrder.PastryPrice);
     }
+
+    [TestMethod]
+    public void CalculatePastryCost_CalculatesCostOfOnePastry_PastryCost()
+    {
+      // Arrange
+      int pastryQuantity = 1;
+      int pastryPrice = 2;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity, pastryPrice);
+
+      // Act
+      int expectedPastryCost = newPastryOrder.CalculatePastryCost(pastryQuantity, pastryPrice);
+
+      // Assert
+      Assert.AreEqual(pastryPrice, expectedPastryCost);
+    }
   }
 }
 

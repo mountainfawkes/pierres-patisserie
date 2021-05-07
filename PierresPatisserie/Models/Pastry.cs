@@ -14,5 +14,10 @@ namespace PierresPatisserie.Pastry
       PastryQuantity = pastryQuantity;
       PastryPrice = pastryPrice;
     }
+
+    public int CalculatePastryCost(int pastryQuantity, int pastryPrice)
+    {
+      return 0;
+    }
   }
 }
