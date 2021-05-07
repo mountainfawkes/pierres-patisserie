@@ -6,17 +6,17 @@ using System.Collections.Generic;
 namespace PierresPatisserie.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadOrderTests
   {
     // test to verify type of a constructor with two fields for quantity and price (if necessary)
     [TestMethod]
-    public void Order_BuildOrderWithBreadQuantity_Order()
+    public void BreadOrder_CreatesInstanceOfBreadOrder_BreadOrder()
     {
       // Act
-      Order newOrder = new Order();
+      BreadOrder newBreadOrder = new BreadOrder(5, 1);
 
       // Assert
-      Assert.AreEqual(typeof(Order), newOrder.GetType());
+      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
     }
   }
 }

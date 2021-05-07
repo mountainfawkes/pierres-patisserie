@@ -15,7 +15,7 @@ namespace PierresPatisserie
       Console.WriteLine("-----------------------------------");
       Console.WriteLine("Today's prices:");
       Console.WriteLine("BREAD: $5 each loaf");
-      Console.WriteLine("Special: Buy 2, get 1 free")
+      Console.WriteLine("Special: Buy 2, get 1 free");
       Console.WriteLine("-----------------------------------");
       Console.WriteLine("PASTRIES: today's pastry is an almond croissant");
       Console.WriteLine("$2 each pastry");

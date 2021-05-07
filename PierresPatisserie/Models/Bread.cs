@@ -3,8 +3,15 @@ using System.Collections.Generic;
 
 namespace PierresPatisserie.Bread
 {
-  public class Bread
+  public class BreadOrder
   {
-    // create a constructor with two fields for quantity and price (if necessary)
+    public int BreadQuantity;
+    public int BreadPrice;
+    public int BreadCost;
+    
+    public BreadOrder(int breadQuantity, int breadPrice)
+    {
+
+    }
   }
 }
