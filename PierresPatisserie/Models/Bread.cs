@@ -26,7 +26,7 @@ namespace PierresPatisserie.Bread
         int remainder = breadQuantity % 3;
         return ((((breadQuantity - remainder) * 2) / 3) + remainder) * breadPrice;
       }
-      else return "Please enter a valid whole number";
+      else return breadQuantity * breadPrice;
     }
   }
 }
