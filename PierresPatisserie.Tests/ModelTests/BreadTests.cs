@@ -8,15 +8,25 @@ namespace PierresPatisserie.Tests
   [TestClass]
   public class BreadOrderTests
   {
-    // test to verify type of a constructor with two fields for quantity and price (if necessary)
     [TestMethod]
     public void BreadOrder_CreatesInstanceOfBreadOrder_BreadOrder()
     {
-      // Act
       BreadOrder newBreadOrder = new BreadOrder(5, 1);
+      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
+    }
+
+    [TestMethod]
+    public void BreadOrder_CreatesOrderWithQuantityAndPrice_BreadOrder()
+    {
+      // Arrange
+      int breadQuantity = 1;
+      int breadPrice = 5;
+      
+      // Act
+      BreadOrder newBreadOrder = new BreadOrder(breadQuantity, breadPrice);
 
       // Assert
-      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
+      Assert.AreEqual(breadPrice, newBreadOrder.BreadPrice);
     }
   }
 }
