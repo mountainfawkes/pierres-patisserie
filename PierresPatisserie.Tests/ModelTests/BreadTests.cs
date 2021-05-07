@@ -60,16 +60,11 @@ namespace PierresPatisserie.Tests
     [TestMethod]
     public void CalculateBreadCost_CalculateCostIfRemainder_BreadCost()
     {
-      // Arrange
       int breadQuantity = 5;
       int breadPrice = 5;
       BreadOrder newBreadOrder = new BreadOrder(breadQuantity, breadPrice);
-
-      // Act
       int expectedBreadCost = 4 * 5;
       int breadCost = newBreadOrder.CalculateBreadCost(breadQuantity, breadPrice);
-
-      // Assert
       Assert.AreEqual(expectedBreadCost, breadCost);
     }
   }
