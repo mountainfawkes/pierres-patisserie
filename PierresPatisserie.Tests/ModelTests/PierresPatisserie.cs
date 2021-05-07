@@ -1,10 +1,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresPatisserie.Bread;
+using PierresPatisserie.Pastry;
 using System;
 using System.Collections.Generic;
 
 namespace PierresPatisserie.Tests
 {
+  // Tests for BreadOrder class
   [TestClass]
   public class BreadOrderTests
   {
@@ -66,6 +68,23 @@ namespace PierresPatisserie.Tests
       int expectedBreadCost = 4 * 5;
       int breadCost = newBreadOrder.CalculateBreadCost(breadQuantity, breadPrice);
       Assert.AreEqual(expectedBreadCost, breadCost);
+    }
+  }
+
+  // Tests for Pastry Order class
+  [TestClass]
+  public class PastryOrderTests
+  {
+    [TestMethod]
+    public void PastryOrder_CreateInstanceOfPastryOrder_PastryOrder()
+    {
+      // Arrange
+      
+      // Act
+      PastryOrder newPastryOrder = new PastryOrder();
+
+      // Assert
+      Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
   }
 }
