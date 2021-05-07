@@ -28,6 +28,22 @@ namespace PierresPatisserie.Tests
       // Assert
       Assert.AreEqual(breadPrice, newBreadOrder.BreadPrice);
     }
+
+    [TestMethod]
+    public void CalculateBreadCost_CalculateCostOfOneLoaf_BreadCost()
+    {
+      // Arrange
+      int breadQuantity = 1;
+      int breadPrice = 5;
+      BreadOrder newBreadOrder = new BreadOrder(breadQuantity, breadPrice);
+
+      // Act
+      int expectedBreadCost = 5 * 1;
+      int breadCost = newBreadOrder.CalculateBreadCost(breadQuantity, breadPrice);
+
+      // Assert
+      Assert.AreEqual(expectedBreadCost, breadCost);
+    }
   }
 }
 
